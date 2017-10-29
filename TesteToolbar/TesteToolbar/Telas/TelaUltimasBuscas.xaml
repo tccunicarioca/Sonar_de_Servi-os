@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TesteToolbar.Telas.TelaUltimasBuscas"
+             Title="Ultimos Visualizados"
+             >
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Busca" Icon="buscaIcon" Activated="ToolbarItem_Busca"/>
+        <ToolbarItem Text="Cadastro" Activated="ToolbarItem_Cadastro" Order="Secondary"/>
+        <ToolbarItem Text="Login" Activated="ToolbarItem_Login" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <ListView x:Name="listUltimasBuscas"
+                  ItemTapped="OnUsuarioClicado">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Nome}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

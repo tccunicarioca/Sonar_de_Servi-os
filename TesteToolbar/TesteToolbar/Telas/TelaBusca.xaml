@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TesteToolbar.TelaInicial"   
+             Title="Busca"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cadastro" Activated="ToolbarItem_Cadastro" Order="Secondary"/>
+        <ToolbarItem Text="Últimas Buscas" Activated="ToolbarItem_Ultima" Order="Secondary"/>
+        <ToolbarItem Text="Login" Activated="ToolbarItem_Login" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+
+
+    <StackLayout VerticalOptions="CenterAndExpand" >
+        <Picker x:Name="pkBusca" HorizontalOptions="FillAndExpand" Title="Selecione a Busca">
+            <Picker.Items>
+                <x:String>Op_1</x:String>
+                <x:String>Op_2</x:String>
+                <x:String>Op_3</x:String>
+                <x:String>Op_4</x:String>
+                <x:String>Op_5</x:String>
+                <x:String>Op_6</x:String>
+                <x:String>Op_7</x:String>
+                <x:String>Op_8</x:String>
+            </Picker.Items>
+        </Picker>
+
+            <Entry x:Name="entEnd"
+                VerticalOptions="CenterAndExpand" 
+                Placeholder="Entre com o endereço"/>
+
+            <Button x:Name="btnBuscar" Text="BUSCAR"
+                    Clicked="OnBuscaDados"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+
+        </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TesteToolbar.TelaCadastro"
+             Title="Cadastro"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Busca" Icon="buscaIcon" Activated="ToolbarItem_Busca"/>
+        <ToolbarItem Text="Últimas Buscas" Activated="ToolbarItem_Ultimas" Order="Secondary"/>
+        <ToolbarItem Text="Login" Activated="ToolbarItem_Login" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout VerticalOptions="Center">
+        
+        <Entry x:Name="entNome" 
+               Placeholder="Nome"/>
+
+        <Entry x:Name="entCpf" 
+               Placeholder="Cpf/Cnpj"/>
+
+        <Entry x:Name="entEndereco" 
+               Placeholder="Endereço"/>
+
+        <Entry x:Name="entCelular" 
+               Placeholder="Nº de Celular"/>
+
+        <Entry x:Name="entTel" 
+               Placeholder="Nº de Telefone Residêncial"/>
+
+        <Entry x:Name="entComercial" 
+               Placeholder="Nº de Telefone Comercial"/>
+        
+        <Entry x:Name="entEmail" 
+               Placeholder="Email"
+               Keyboard="Email"/>
+        
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnCadastrar" Text="CADASTRAR" Clicked="OnCadastrar"/>
+            <Button x:Name="btnLimpar" Text="LIMPAR" Clicked="OnLimpar"/>
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
